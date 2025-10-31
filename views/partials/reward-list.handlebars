@@ -3,22 +3,19 @@
         <div class="card blue lighten-5">
             <div class = "card-content">
             <span class="card-title">Level {{index}} Rewards</span>
-            {{#if rewards.free.rewards}}
-            <div class="indigo lighten-5">
-                <span><strong>Free:</strong></span>
-                <p>Lore: {{rewards.free.display.lore}}</p>
-                <p>Display Item: {{rewards.free.display.item}}</p>
-                <p>Commands to Run: {{rewards.free.rewards}}</p>
+            {{#each rewards}}
+            {{#if this.rewards.length}}
+            <div class="indigo lighten-5 track-output">
+                <span><strong>{{#if this.label}}{{this.label}}{{else}}{{#if this.display.name}}{{this.display.name}}{{else}}{{@key}}{{/if}}{{/if}}:</strong></span>
+                {{#if this.permission}}
+                <p>Permission: {{this.permission}}</p>
+                {{/if}}
+                <p>Lore: {{this.display.lore}}</p>
+                <p>Display Item: {{this.display.item}}</p>
+                <p>Commands to Run: {{this.rewards}}</p>
             </div>
             {{/if}}
-            {{#if rewards.premium.rewards}}
-            <div class="indigo lighten-4">
-                <span><strong>Premium:</strong></span>
-                <p>Lore: {{rewards.premium.display.lore}}</p>
-                <p>Display Item: {{rewards.premium.display.item}}</p>
-                <p>Commands to Run: {{rewards.premium.rewards}}</p>
-            </div>
-            {{/if}}
+            {{/each}}
             </div>
         </div>
     </div>
