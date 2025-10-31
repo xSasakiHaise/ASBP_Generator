@@ -5,3 +5,34 @@
 .jsonText {
     height: 10rem;
 }
+
+.track-wrapper {
+    margin-bottom: 1rem;
+}
+
+.track-header .input-field {
+    margin-top: 0;
+}
+
+.track-permission-field .track-permission {
+    margin-bottom: 0;
+}
+
+.track-actions {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+}
+
+.track-actions .removeTrackBtn {
+    margin-top: 0;
+}
+
+.track-output {
+    margin-top: 1rem;
+    padding: 1rem;
+}
+
+.track-subtitle {
+    margin-top: 0.5rem;
+}
